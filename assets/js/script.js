@@ -12,7 +12,7 @@ function generateRecipes() {
         response.json().then(function(data) {
         console.log(data);
 
-        var recipeContainer = document.getElementById("generate");
+        var recipeContainer = document.getElementById("recipe-card-container");
         recipeContainer.innerHTML = "";
         
         for (var i = 0; i <=2; i++) {
