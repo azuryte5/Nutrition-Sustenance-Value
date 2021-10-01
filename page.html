@@ -38,45 +38,54 @@
         <img src="./assets/img/2.jpg" width="1000px" alt="Mom with her daughter preparing a tasty meal">
       </div>
     </div>
+    
+
+
+    
     <div class="row">
       <div id="form" class="text-center">
-        <!--https://harvesthq.github.io/chosen/ :link how it works  
-          https://harvesthq.github.io/chosen/options.html is link to different options-->
-        <div class="flex-row">
-          <select id="cuisine" data-placeholder="Choose up to 3 cuisine types" multiple="true" class="chosen-select"
-            multiple tabindex="4">
-            <option value=" "></option>
-            <option value="American">American </option>
-            <option value="Asian">Asian </option>
-            <option value="British">British </option>
-            <option value="Caribbean">Caribbean </option>
-            <option value="Indian">Indian </option>
-            <option value="Italian">Italian </option>
-            <option value="Kosher">Kosher </option>
-            <option value="Mexican">Mexican </option>
-          </select>
-          <button id="button">Submit</button>
-        <!--This may need to be seperated in two divs to look nice -az</div>
-
-        <div class="flex-row col-6"> -->
-          <select id="health" data-placeholder="Choose a health requirement" multiple="true" class="chosen-select"
-            multiple tabindex="4">
-            <option value=" "></option>
-            <option value="Dairy-free">Dairy-free </option>
-            <option value="Egg-free">Egg-free </option>
-            <option value="Gluten-free">Gluten-free </option>
-            <option value="Low-sugar">Low-sugar </option>
-            <option value="Paleo">Paleo </option>
-            <option value="Peanut-free">Peanut-free </option>
-            <option value="Soy-free ">Soy-free </option>
-            <option value="Vegan">Vegan </option>
-          </select>
-          <button id="button2">Submit</button>
-            
-        </div>
+        
         <div>
           <h2>What ingredients do you have on hand? <br /> You can include up to 10.</h2>
           <input type="text" placeholder="rice, chicken, oranges" id="ingredient" class="form-input" />
+          
+            <!--https://harvesthq.github.io/chosen/ :link how it works  
+            https://harvesthq.github.io/chosen/options.html is link to different options-->
+          <div class="flex-row">
+            <span>Are you in the mood for a particular type of cuisine?</span>
+            <select id="cuisine" data-placeholder="-- select --" multiple="true" class="chosen-select"
+              multiple tabindex="4">
+              <!-- <option value=" "></option> -->
+              <option value="American">American </option>
+              <option value="Asian">Asian </option>
+              <option value="British">British </option>
+              <option value="Caribbean">Caribbean </option>
+              <option value="Indian">Indian </option>
+              <option value="Italian">Italian </option>
+              <option value="Kosher">Kosher </option>
+              <option value="Mexican">Mexican </option>
+            </select>
+            <!-- <button id="button">Submit</button> -->
+          </div>
+
+          <div class="flex-row">
+            <span>Do you have any particular health requirements or preferences?</span>
+            <select id="health" data-placeholder="-- select --" multiple="true" class="chosen-select"
+              multiple tabindex="4">
+              <!-- <option value=" "></option> -->
+              <option value="Dairy-free">Dairy-free </option>
+              <option value="Egg-free">Egg-free </option>
+              <option value="Gluten-free">Gluten-free </option>
+              <option value="Low-sugar">Low-sugar </option>
+              <option value="Paleo">Paleo </option>
+              <option value="Peanut-free">Peanut-free </option>
+              <option value="Soy-free ">Soy-free </option>
+              <option value="Vegan">Vegan </option>
+            </select>
+            <!-- <button id="button2">Submit</button> -->
+              
+          </div>
+          
           <button type="button" onclick="generateRecipes()">Find Recipes!</button>
         </div>
       </div>
@@ -88,7 +97,8 @@
             <h2>Recipes</h2>
       
         </div> -->
-        <div class="footer">
+        
+        <div class="row footer">
           <h2>&copy; 2021 Made with ❤️️ by the Green Team</h2>
 
         </div>
