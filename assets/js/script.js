@@ -11,9 +11,33 @@ function generateRecipes() {
       if (response.ok) {
         response.json().then(function(data) {
         console.log(data);
-        });
-      } 
 
+        var recipeContainer = document.getElementById("generate");
+        recipeContainer.innerHTML = "";
+        
+        for (var i = 0; i <=2; i++) {
+          var recipeEl = document.createElement("div");
+          recipeEl.classList = "text-center";
+          recipeEl.setAttribute("id", "generate");
+          recipeEl.innerHTML = data.hits[i].recipe.label + "<br />";
+          console.log(data.hits[i].recipe.label);
+          recipeEl.innerHTML+= "Serves: " + data.hits[i].recipe.yield +  "<br />";
+          recipeEl.innerHTML+= '<img src=' + data.hits[i].recipe.image + ' <br />';
+          recipeEl.innerHTML+= "Ingrediets: " + data.hits[i].recipe.ingredientLines +  "<br /> <br />";
+          recipeEl.innerHTML+= "Go to the recipe: <a href='url'>" + data.hits[i].recipe.url + "</a> <br />";
+          recipeContainer.appendChild(recipeEl);
+
+        }
+        
+        
+    
+
+
+       
+
+
+        });
+      }
 
     });
 }
