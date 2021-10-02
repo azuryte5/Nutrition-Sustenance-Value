@@ -18,7 +18,10 @@
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> -->
  
   <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <!--Mapbox Api-->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
   <title>Nutrivalue</title>
 </head>
 
@@ -72,29 +75,38 @@
           <div class="flex-row">
             <span>Do you have any particular health requirements or preferences?</span>
             <select id="health" data-placeholder="Select up to 3" multiple="true" class="chosen-select" multiple>
-              <option value="Dairy-free">Dairy-free</option>
-              <option value="Egg-free">Egg-free</option>
-              <option value="Gluten-free">Gluten-free</option>
-              <option value="Low-sugar">Low-sugar</option>
-              <option value="Paleo">Paleo</option>
-              <option value="Peanut-free">Peanut-free</option>
-              <option value="Soy-free ">Soy-free</option>
-              <option value="Vegan">Vegan</option>
+              <option value="dairy-free">Dairy-free</option>
+              <option value="egg-free">Egg-free</option>
+              <option value="gluten-free">Gluten-free</option>
+              <option value="low-sugar">Low-sugar</option>
+              <option value="paleo">Paleo</option>
+              <option value="peanut-free">Peanut-free</option>
+              <option value="soy-free ">Soy-free</option>
+              <option value="vegan">Vegan</option>
             </select>
           </div>
           
+
           <button type="button" onclick="generateRecipes()"><span class="material-icons">
             restaurant
             </span>Find Recipes!</button>
+
+          <button type="button" id="button" onclick="generateRecipes()">Find Recipes!</button>
+
         </div>
       </div>
       <div class="row">
         <div id="recipe-card-container">
         </div>
+
         <footer class="footer">
           <div class="content has-text-centered">
             <p>
         <!-- <div class="row footer"> -->
+
+        <div id='map' style='width: 500px; height: 500px;' ></div>
+        <div class="row footer">
+
           <h2>&copy; 2021 Made with ❤️️ by the Green Team</h2>
           </p>
         </div>
