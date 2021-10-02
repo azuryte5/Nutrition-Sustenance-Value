@@ -1,3 +1,6 @@
+var cuisineType = "";
+var healthType = "";
+
 function generateRecipes() {
   // ingredients pulled from input
   var ingredients = document.querySelector("#ingredient").value;
@@ -27,38 +30,27 @@ function generateRecipes() {
           recipeEl.innerHTML+= "Go to the recipe: <a href='url'>" + data.hits[i].recipe.url + "</a> <br />";
           recipeContainer.appendChild(recipeEl);
 
-        }
-        
-        
-    
-
-
-       
-
-
+        };
         });
-      }
-
+      };
     });
 }
 
 
 // This is for the dropdown plug in to get them to work
 $(function() {
-  $(".chosen-select").chosen({max_selected_options: 3},{width: "90%"});
+  $(".chosen-select").chosen({
+    max_selected_options: 3,
+    width: "90%"});
 });
 
 // Button one logs the choices console log entry can be stored as a variable
 // It's not an array though, it strings the words with the single space at present.
 $("#button").on("click", function() {
-  console.log($("#cuisine_chosen .result-selected").text())
-var cuisineType = $("#cuisine_chosen .result-selected").text()    
-alert("You chose: " + cuisineType) 
+  // console.log($("#cuisine_chosen .result-selected").text())
+  var cuisineType = $("#cuisine_chosen .result-selected").text()  
+  console.log(cuisineType);  
+  var healthType = $("#health_chosen .result-selected").text()
+  console.log(healthType);
 })
 
-// other button made for practice but will likely all be combined into 1 submit button.
-$("#button2").on("click", function() {
-  console.log($("#health_chosen .result-selected").text())
-var healthType = $("#health_chosen .result-selected").text()
-alert("You chose: " + healthType)
-  })
