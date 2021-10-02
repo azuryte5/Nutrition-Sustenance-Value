@@ -69,5 +69,13 @@ $(function() {
   });
 });
 
-
+// Content for the map with working access token
+mapboxgl.accessToken =
+  "pk.eyJ1IjoiYXp1cnl0ZSIsImEiOiJja3U5dGpsbjYwYTZnMnZubmVtZXZ4bzcyIn0.4TNon4_EuBE9I_4Xg-U7kQ";
+const map = new mapboxgl.Map({
+  container: "map", // container ID
+  style: "mapbox://styles/mapbox/streets-v11", // style URL
+  center: [-75.69, 45.42], // starting position [lng, lat]
+  zoom: 12, // starting zoom
+});
 
