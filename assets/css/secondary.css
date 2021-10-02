@@ -33,6 +33,7 @@ font-size: 100px;
 strong{
     font-family: 'Fleur De Leah', cursive;  
     font-size:40px;
+    color: #8cb369 ;
 }
 
 em{
@@ -65,11 +66,12 @@ em{
     /* width: 54%; */
     text-align: left;
     margin-top: 60px;
-    color: #8cb369 ;
+    color: #fae285;
     font-size: 30px;
     line-height: 1.7;
     padding-right: 30px;
     font-family: 'Courgette', cursive;
+    /* background-color: wheat; */
     /* margin-left: 100px; */
     /* margin-right: 3px; */
 }
