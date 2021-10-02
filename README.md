@@ -2,9 +2,9 @@
 Group project. Hopefully merging will not cause conflicts. Github pages should still be able to do fetch requests.
 
 
-* The URL of the deployed application: https://github.com/azuryte5/Nutrition-Sustenance-Value
+* The URL of the deployed application: https://azuryte5.github.io/Nutrition-Sustenance-Value/
 
-* The URL of the GitHub repository: https://azuryte5.github.io/Nutrition-Sustenance-Value/
+* The URL of the GitHub repository: https://github.com/azuryte5/Nutrition-Sustenance-Value
 
 <img src="assets/images/screenshot-nutrivalue.png" alt="Weather Location Search" width="500" style="max-width: 100%;">
 
