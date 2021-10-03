@@ -155,7 +155,7 @@ img{
         font-size: 30px;
  }
       .footer{
-        margin:60px;
+        margin:20px;
         text-align: center;
         color:#8cb369 ;
         font-family: 'Courgette', cursive;
@@ -165,12 +165,32 @@ img{
     .content h2{
         color:#8cb369 ;
     }
+    .little-title h1{
+        color: #f4e285;  
+        font-family: 'Courgette', cursive;
+        font-size: 50px;
+        margin-top: 50px;
+    }
       
     a:hover{
         background: #acacac;
         transition: .5s;
         border-radius: 15px;
         color: #fae285;
+      }
+
+      #map{
+        border-radius: 75px;
+        text-align: center;
+        border:solid 5px;
+        flex: 112%;
+        margin: 80px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-shrink: 3;
+        max-width: 234%;
+
       }
 
       @media screen and (max-width: 1277.09px) {
