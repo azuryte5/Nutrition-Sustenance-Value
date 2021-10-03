@@ -74,7 +74,7 @@ mapboxgl.accessToken =
   "pk.eyJ1IjoiYXp1cnl0ZSIsImEiOiJja3U5dGpsbjYwYTZnMnZubmVtZXZ4bzcyIn0.4TNon4_EuBE9I_4Xg-U7kQ";
 const map = new mapboxgl.Map({
   container: "map", // container ID
-  style: "mapbox://styles/mapbox/streets-v11", // style URL
+  style: "mapbox://styles/mapbox/light-v10", // style URL
   center: [-75.69, 45.42], // starting position [lng, lat]
   zoom: 12, // starting zoom
 });
@@ -95,3 +95,35 @@ var alsoApiURL = "https://api.mapbox.com/geocoding/v5/mapbox.places/market%2Cbut
     if (response.ok) {
       response.json().then(function(data) {
       console.log(data)})}}) 
+
+      const geojson = {
+        type: 'FeatureCollection',
+        features: [
+          {
+            type: 'Feature',
+            geometry: {
+              type: 'Point',
+              coordinates: [-75.690, 45.334]
+            },
+            properties: {
+              title: "T&T Supermarket 大统华",
+              description: '224 Hunt Club Rd, Ottawa, Ontario.'
+            }
+          }
+        ]
+      };
+
+      // add markers to map
+for (const { geometry, properties } of geojson.features) {
+  // create a HTML element for each feature
+  const el = document.createElement('div');
+  el.className = 'marker';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el).setLngLat(geometry.coordinates)
+  .setPopup(
+    new mapboxgl.Popup({ offset: 25 }) // add popups
+      .setHTML(`<h3>${properties.title}</h3><p>${properties.description}</p>`)
+  )
+  .addTo(map);
+}
