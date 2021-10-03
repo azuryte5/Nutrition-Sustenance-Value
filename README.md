@@ -6,7 +6,7 @@ Group project. Hopefully merging will not cause conflicts. Github pages should s
 
 * The URL of the GitHub repository: https://github.com/azuryte5/Nutrition-Sustenance-Value
 
-<img src="assets/images/screenshot-nutrivalue.png" alt="Weather Location Search" width="500" style="max-width: 100%;">
+<img src="assets/img/screenshot-nutrivalue.png" alt="Weather Location Search" width="500" style="max-width: 100%;">
 
 As an individual interested in healthy eating with a busy lifestyle,
 
