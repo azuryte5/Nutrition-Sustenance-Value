@@ -86,3 +86,12 @@ map.addControl(
   mapboxgl: mapboxgl
   })
   );
+
+//Map API
+var alsoApiURL = "https://api.mapbox.com/geocoding/v5/mapbox.places/market%2Cbutcher.json?access_token=pk.eyJ1IjoiYXp1cnl0ZSIsImEiOiJja3U5dGpsbjYwYTZnMnZubmVtZXZ4bzcyIn0.4TNon4_EuBE9I_4Xg-U7kQ&cachebuster=1633231166631&autocomplete=false&types=poi&bbox=-76.2%2C45.0%2C-75.2%2C45.6&limit=10"
+  fetch(alsoApiURL)
+  .then(function(response) {
+    //request was successful
+    if (response.ok) {
+      response.json().then(function(data) {
+      console.log(data)})}}) 
