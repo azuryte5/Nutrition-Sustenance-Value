@@ -79,3 +79,10 @@ const map = new mapboxgl.Map({
   zoom: 12, // starting zoom
 });
 
+// Add the control to the map.
+map.addControl(
+  new MapboxGeocoder({
+  accessToken: mapboxgl.accessToken,
+  mapboxgl: mapboxgl
+  })
+  );
