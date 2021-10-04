@@ -27,6 +27,6 @@ Technologies use:
 4. JavaScript
 5. jQuery
 5. https://developer.edamam.com/ - API service for recipes and nutritions
-6. - API service for map
+6. https://docs.mapbox.com/mapbox-gl-js/guides/install/#quickstart - API service for map
 
 Image of mock-up:
