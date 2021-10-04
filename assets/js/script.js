@@ -81,41 +81,60 @@ const map = new mapboxgl.Map({
   container: "map", // container ID
   style: "mapbox://styles/mapbox/dark-v10", // style URL
   center: [-75.69, 45.42], // starting position [lng, lat]
-  zoom: 12, // starting zoom
+  zoom: 10, // starting zoom
 });
 
 // Add the control to the map.
 map.addControl(
   new MapboxGeocoder({
+    placeholder: "Pick area then button afterwards",
     accessToken: mapboxgl.accessToken,
     mapboxgl: mapboxgl,
+    zoom: 4
   })
 );
 
-var shopLong = " ";
-var shopLat = " ";
-var shopTitle = " ";
-var shopAddress = " ";
+var center=map.getCenter()
+var westBox = center.lng - 0.5;
+var southBox = center.lat - 0.3;
+var eastBox = center.lng + 0.5;
+var northBox = center.lat + 0.3;
+
+$("#searchStore").on("click", function(center){
+var center=map.getCenter();
+westBox = center.lng - 0.5;
+southBox = center.lat - 0.3;
+eastBox = center.lng + 0.5;
+northBox = center.lat + 0.3;
+console.log(center)
+generateStore(westBox, southBox, eastBox, northBox)
+})
+
+// var shopLong = " ";
+// var shopLat = " ";
+// var shopTitle = " ";
+// var shopAddress = " ";
 //Map API
+function generateStore(westBox, southBox, eastBox, northBox) {
 var alsoApiURL =
-  "https://api.mapbox.com/geocoding/v5/mapbox.places/market%2Cbutcher.json?access_token=pk.eyJ1IjoiYXp1cnl0ZSIsImEiOiJja3U5dGpsbjYwYTZnMnZubmVtZXZ4bzcyIn0.4TNon4_EuBE9I_4Xg-U7kQ&cachebuster=1633231166631&autocomplete=false&types=poi&bbox=-76.2%2C45.0%2C-75.2%2C45.6&limit=10";
+  "https://api.mapbox.com/geocoding/v5/mapbox.places/market%2Cbutcher.json?access_token=pk.eyJ1IjoiYXp1cnl0ZSIsImEiOiJja3U5dGpsbjYwYTZnMnZubmVtZXZ4bzcyIn0.4TNon4_EuBE9I_4Xg-U7kQ&cachebuster=1633231166631&autocomplete=false&types=poi&bbox="+westBox+"%2C"+southBox+"%2C"+eastBox+"%2C"+northBox+"&limit=10";
 fetch(alsoApiURL).then(function (response) {
   //request was successful
   if (response.ok) {
     return response.json().then(function (response) {
       console.log(response);
-      console.log(
-        "Long,Lat is " +
-          response.features[0].center[0] +
-          " " +
-          response.features[0].center[1]
-      );
-      shopLong = response.features[0].center[0];
-      shopLat = response.features[0].center[1];
-      console.log("Store Name: " + response.features[0].text);
-      shopTitle = response.features[0].text;
-      console.log("Store Address: " + response.features[0].properties.address);
-      shopAddress = response.features[0].properties.address;
+      // console.log(
+      //   "Long,Lat is " +
+      //     response.features[0].center[0] +
+      //     " " +
+      //     response.features[0].center[1]
+      // );
+      // shopLong = response.features[0].center[0];
+      // shopLat = response.features[0].center[1];
+      // console.log("Store Name: " + response.features[0].text);
+      // shopTitle = response.features[0].text;
+      // console.log("Store Address: " + response.features[0].properties.address);
+      // shopAddress = response.features[0].properties.address;
       // var marker = [];  
       // for (var i = 0; i < response.features.length; i++) {
       //   var builder = [
@@ -138,7 +157,7 @@ fetch(alsoApiURL).then(function (response) {
       // console.log(marker);
       // console.log((response.features[0].center[0]))
 
- 
+      // I started refactoring this code too soon and struggled to get marker -> builder but I think i know why now.
       const geojson = {
         type: 'FeatureCollection',
         features: [
@@ -275,3 +294,4 @@ fetch(alsoApiURL).then(function (response) {
     });
   }
 });
+}
