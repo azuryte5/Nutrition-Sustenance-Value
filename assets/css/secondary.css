@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+html {
+    background-color: rgba(255, 255, 255, 0);
+  }
+
 body {
     background-image: url("../img/4.jpg");
     background-size: cover;
@@ -26,9 +30,21 @@ font-family: 'Fleur De Leah', cursive;
 font-size: 100px;
 }
 
+strong{
+    font-family: 'Fleur De Leah', cursive;  
+    font-size:40px;
+    color: #8cb369 ;
+}
+
+em{
+    color: #fae285;
+}
+
+
 .l{
     font-family: 'Fleur De Leah', cursive;
     font-size: 100px;
+    color: #8cb369 ;
 }
 .seo{
     font-family: 'Great Vibes', cursive;
@@ -50,10 +66,12 @@ font-size: 100px;
     /* width: 54%; */
     text-align: left;
     margin-top: 60px;
-    color: #8cb369 ;
+    color: #fae285;
     font-size: 30px;
     line-height: 1.7;
+    padding-right: 30px;
     font-family: 'Courgette', cursive;
+    /* background-color: wheat; */
     /* margin-left: 100px; */
     /* margin-right: 3px; */
 }
@@ -69,12 +87,15 @@ font-size: 100px;
 .footer{
     margin:60px;
     text-align: center;
+    color:#8cb369 ;
     font-family: 'Courgette', cursive;
+    background-color: unset;
 }
 
 button{
     margin-top: 20px;
     margin-left: 200px;
+    padding:20px;
     text-align: center;
     background-color: #8cb369;
   border-radius: 15px;
@@ -82,7 +103,9 @@ button{
   transition: all .6s ease-out;  
   background-position: 0px -1px;
   background-size: 1px 100px; 
-  cursor: pointer;   
+  cursor: pointer;  
+  font-size: 20px; 
+  font-family: 'Courgette', cursive;
 }
 a{
     text-decoration: none;
