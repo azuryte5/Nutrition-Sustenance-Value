@@ -74,7 +74,7 @@ mapboxgl.accessToken =
   "pk.eyJ1IjoiYXp1cnl0ZSIsImEiOiJja3U5dGpsbjYwYTZnMnZubmVtZXZ4bzcyIn0.4TNon4_EuBE9I_4Xg-U7kQ";
 const map = new mapboxgl.Map({
   container: "map", // container ID
-  style: "mapbox://styles/mapbox/light-v10", // style URL
+  style: "mapbox://styles/mapbox/dark-v10", // style URL
   center: [-75.69, 45.42], // starting position [lng, lat]
   zoom: 12, // starting zoom
 });
@@ -87,15 +87,26 @@ map.addControl(
   })
   );
 
+var shopLong = " "
+var shopLat = " "
+var shopTitle = " "
+var shopAddress = " " 
 //Map API
 var alsoApiURL = "https://api.mapbox.com/geocoding/v5/mapbox.places/market%2Cbutcher.json?access_token=pk.eyJ1IjoiYXp1cnl0ZSIsImEiOiJja3U5dGpsbjYwYTZnMnZubmVtZXZ4bzcyIn0.4TNon4_EuBE9I_4Xg-U7kQ&cachebuster=1633231166631&autocomplete=false&types=poi&bbox=-76.2%2C45.0%2C-75.2%2C45.6&limit=10"
   fetch(alsoApiURL)
   .then(function(response) {
     //request was successful
     if (response.ok) {
-      response.json().then(function(data) {
-      console.log(data)})}}) 
-
+      return response.json().then(function(response) {
+      console.log(response) 
+      console.log("Long,Lat is " + response.features[0].center[0] + " " + response.features[0].center[1] )
+      shopLong= response.features[0].center[0]
+      shopLat = response.features[0].center[1]
+      console.log("Store Name: " + response.features[0].text)
+      shopTitle=response.features[0].text
+      console.log("Store Address: " + response.features[0].properties.address)
+      shopAddress= response.features[0].properties.address
+    
       const geojson = {
         type: 'FeatureCollection',
         features: [
@@ -103,11 +114,11 @@ var alsoApiURL = "https://api.mapbox.com/geocoding/v5/mapbox.places/market%2Cbut
             type: 'Feature',
             geometry: {
               type: 'Point',
-              coordinates: [-75.690, 45.334]
+              coordinates: [shopLong, shopLat]
             },
             properties: {
-              title: "T&T Supermarket 大统华",
-              description: '224 Hunt Club Rd, Ottawa, Ontario.'
+              title: shopTitle,
+              description: shopAddress
             }
           }
         ]
@@ -127,3 +138,4 @@ for (const { geometry, properties } of geojson.features) {
   )
   .addTo(map);
 }
+})}})
