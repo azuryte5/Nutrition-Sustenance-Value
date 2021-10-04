@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.header{
+    padding: 20px;
+    font-size: 20px;
+}
+
+.header label {
+color:#8cb369 ;
+display: inline-block;
+margin-left: 60px;
+}
+
+.header label .seo {
+    color: #f4e285;
+}
+
+.l{
+    font-family: 'Fleur De Leah', cursive;
+    font-size: 60px;
+
+}
+.seo{
+    font-family: 'Great Vibes', cursive;  
+}
+
+.header nav {
+    padding-top: 15px;
+    margin-right: 400px;
+    float: right;
+    font-size: 30px;
+    margin-bottom: 20px;
+    
+}
+
+.header nav ul {
+    list-style-type: none;
+    
+}
+
+.header nav ul li {
+    display: inline-block;
+    margin-left: 35px;
+    font-family: 'Courgette', cursive;
+  
+    
+}
+
+a{
+text-decoration: none;
+color: #f4e285;
+margin-bottom: 20px;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+
+body {
+    background-image: url("../img/6.jpg");
+    background-size: cover;
+  background-attachment: fixed;
+  background-position: 100%;
+}
+
+
+img{
+    border-radius: 75px;
+    text-align: center;
+    border:solid 5px;
+    flex: 112%;
+    margin: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-shrink: 3;
+    max-width: 234%;
+    
+    
+    }
+
+    .row{
+       position: relative;
+       display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+    }
+   
+    #form {
+        border: 3px solid #11c21f;
+        background-color: #f4e285;
+        padding-left:90px;
+        padding-right:60px;
+        opacity:95%;
+        color: #024e76;
+        width: 60%;
+        margin: 1.5%;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        font-size: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        font-family: 'Courgette', cursive;
+      
+    }
+ 
+      
+      .form-input {
+          text-align: center;
+        border: 1px solid #024e76;
+        display: block;
+        padding: 7px 15px;
+        font-size: 30px;
+        color: #024e76;
+        width: 100%;
+        margin-bottom: 5px; 
+        border-radius: 10px;
+        background-color: rgba(255,255,255, 0.75);
+        display: flex;
+        flex-wrap: wrap;
+        font-family: 'Courgette', cursive;
+      }
+      button{
+        margin-top: 20px;
+        margin-left: 200px;
+        padding:20px;
+        text-align: center;
+        background-color: #8cb369;
+      border-radius: 15px;
+      background-image: linear-gradient(50deg, #f4a259 5%, #f4e285 52%, #8cb369 70%);
+      transition: all .6s ease-out;  
+      background-position: 0px -1px;
+      background-size: 1px 100px; 
+      cursor: pointer;  
+      font-size: 20px; 
+      font-family: 'Courgette', cursive;
+    }
+
+      #generate{
+        border: 3px solid #11c21f;
+        background-color: #f4e285;
+        padding: 10px;
+        color: #024e76;
+        width: 100%;
+        margin: 2.5%;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-wrap: wrap;
+        font-family: 'Courgette', cursive;
+        font-size: 30px;
+ }
+      .footer{
+        margin:20px;
+        text-align: center;
+        color:#8cb369 ;
+        font-family: 'Courgette', cursive;
+        background-color: unset;
+    }
+
+    .content h2{
+        color:#8cb369 ;
+    }
+    .little-title h1{
+        color: #f4e285;  
+        font-family: 'Courgette', cursive;
+        font-size: 50px;
+        margin-top: 50px;
+    }
+      
+    a:hover{
+        background: #acacac;
+        transition: .5s;
+        border-radius: 15px;
+        color: #fae285;
+      }
+
+      #map{
+        border-radius: 75px;
+        text-align: center;
+        border:solid 5px;
+        flex: 112%;
+        margin: 80px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-shrink: 3;
+        max-width: 234%;
+
+      }
+
+      @media screen and (max-width: 1277.09px) {
+          img{
+margin-top: 120px;
+margin-left: 100px;
+
+
+          }
+
+      }
+
+      @media screen and (max-width: 1395.59px){
+        img{
+            margin-top: 180px;
+            margin-left: 200px;
+           
+            
+                      }
+
+      }
+
+      @media screen and (max-width: 1670.09px) {
+        img{
+            margin-top: 260px;
+            margin-left: 100px;
+            width: 500px;
+           }
+
+           #form {
+           
+            width: 91%;
+           }
+           #generate{
+            width: 97%;
+            font-size: 21px;
+      }
+
+    
+    /* @media screen and (max-width: 830px) {
+        img{
+        width: 550px;
+        margin: 5px;
+
+    } */

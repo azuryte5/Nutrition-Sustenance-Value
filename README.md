@@ -1,9 +1,15 @@
 # Nutrition-Sustenance-Value
 Name of Web Application: NutriValue
 
-Link to deployed application: https://azuryte5.github.io/Nutrition-Sustenance-Value/
 
 Description:
+=======
+
+* The URL of the deployed application: https://azuryte5.github.io/Nutrition-Sustenance-Value/
+
+* The URL of the GitHub repository: https://github.com/azuryte5/Nutrition-Sustenance-Value
+
+<img src="assets/img/screenshot-nutrivalue.png" alt="recipe generator webpage" width="500" style="max-width: 100%;">
 
 As an individual interested in healthy eating with a busy lifestyle,
 
