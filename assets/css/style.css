@@ -8,6 +8,8 @@ html{
   background-color:rgba(255, 255, 255, 0);
 }
 /*  */
+
+
 .indexb {
   background-image: url("../img/4.jpg");
   background-size: cover;
@@ -51,6 +53,7 @@ em{
 }
 .seoi{
   font-family: 'Great Vibes', cursive;
+  color: #fae285;;
 }
 
 #index h1 {
@@ -78,6 +81,11 @@ em{
   /* margin-left: 100px; */
   /* margin-right: 3px; */
 }
+.row-middle
+.indexlogo{
+margin-left: 200px;
+margin-right: 200px;
+}
 
 #description{
   margin-top: 100px;
@@ -95,9 +103,43 @@ em{
   background-color: unset;
 }
 
+.row
+img
 .images{
   border-radius: 75px;
   }
+
+  .row-button
+  button{
+    
+    margin-top: 20px;
+    margin-left: 200px;
+    padding:20px;
+    text-align: center;
+    background-color: #8cb369;
+  border-radius: 15px;
+  background-image: linear-gradient(50deg, #f4a259 5%, #f4e285 52%, #8cb369 70%);
+  transition: all .6s ease-out;  
+  background-position: 0px -1px;
+  background-size: 1px 100px; 
+  cursor: pointer;  
+  font-size: 20px; 
+  width: 150px;
+  font-family: 'Courgette', cursive;
+  }
+
+  .row-button
+  button
+  a{color: black;}
+
+  .row-button
+  button:hover{
+    background-position: 5px -100px;
+    border-radius: 100px 0px;
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.3); 
+}
 /*  */
 
 .indexlogo{
