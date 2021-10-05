@@ -52,6 +52,17 @@ function generateRecipes() {
           recipeEl.innerHTML+= '<img src="' + data.hits[i].recipe.image + '"> <br />';
           recipeEl.innerHTML+= "Ingrediets: " + data.hits[i].recipe.ingredientLines +  "<br /> <br />";
           recipeEl.innerHTML+= "<a href='" + data.hits[i].recipe.url + "' target='_blank'>Click here to go to the recipe!</a> <br />";
+
+          //nutrition value for calories/fat/protein
+
+          recipeEl.innerHTML += "Nutritional values: "  + "<br/> <br/>"
+          recipeEl.innerHTML += "Calories: " + Math.round(data.hits[i].recipe.calories) + "<br/>"
+          recipeEl.innerHTML += "Fat: " + Math.round(data.hits[i].recipe.totalDaily.FAT.quantity) + "<br/>"
+          recipeEl.innerHTML += "Protein: " + Math.round(data.hits[i].recipe.totalDaily.PROCNT.quantity) + "<br/>"
+          recipeEl.innerHTML += "Carbohyrates: " + Math.round(data.hits[i].recipe.totalDaily.CHOCDF.quantity) + "<br/>"
+          recipeEl.innerHTML += "Sodium: " + Math.round(data.hits[i].recipe.totalDaily.NA.quantity) + "<br/>"
+          recipeEl.innerHTML += "Cholesterol: " + Math.round(data.hits[i].recipe.totalDaily.CHOLE.quantity) + "<br/>"
+
           recipeContainer.appendChild(recipeEl);
 
         };
@@ -68,6 +79,8 @@ $(function() {
     width: "90%",
   });
 });
+
+//modal for error handling + reminding client to write at least one ingredient
 
 // Content for the map with working access token
 mapboxgl.accessToken =
