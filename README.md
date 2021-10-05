@@ -9,7 +9,8 @@ Description:
 
 * The URL of the GitHub repository: https://github.com/azuryte5/Nutrition-Sustenance-Value
 
-<img src="assets/img/screenshot-nutrivalue.png" alt="recipe generator webpage" width="500" style="max-width: 100%;">
+<img src="/assets/img/screenshot-nutrivalue.png" alt="Recipe app with search" width="500" style="max-width: 100%;">
+
 
 As an individual interested in healthy eating with a busy lifestyle,
 

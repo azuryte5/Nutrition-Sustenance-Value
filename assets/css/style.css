@@ -171,7 +171,24 @@ img{
         font-size: 50px;
         margin-top: 50px;
     }
+     /* These are map css */ 
+    .marker {
+        background-image: url('../img/carrot.png');
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .mapboxgl-popup {
+        max-width: 200px;
+      }
       
+      .mapboxgl-popup-content {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+      }
+   
     a:hover{
         background: #acacac;
         transition: .5s;
@@ -192,7 +209,7 @@ img{
         max-width: 234%;
 
       }
-
+ /*end of map css */
       @media screen and (max-width: 1277.09px) {
           img{
 margin-top: 120px;
@@ -202,6 +219,7 @@ margin-left: 100px;
           }
 
       }
+
 
       @media screen and (max-width: 1395.59px){
         img{

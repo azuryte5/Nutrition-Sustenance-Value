@@ -21,7 +21,11 @@
   <!--Mapbox Api-->
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
+  <!--Mapbox labels-->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css' rel='stylesheet'>
   <title>Nutrivalue</title>
 </head>
 
@@ -97,16 +101,17 @@
       <div class="row">
         <div id="recipe-card-container">
         </div>
+        
         <div class="little-title">
           <h1>Places to Buy</h1>
         </div>
         <div id='map' style='width: 1000px; height: 500px;' ></div>
+        <button type="button" id="searchStore">Find Fresh Food near You</button>
      
         <footer class="footer">
           <div class="content has-text-centered">
             <p>
         <!-- <div class="row footer"> -->
-       
       
         <div class="row footer">
           <h2>&copy; 2021 Made with ❤️️ by the Green Team</h2>
