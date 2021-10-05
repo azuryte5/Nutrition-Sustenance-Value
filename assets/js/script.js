@@ -50,7 +50,7 @@ function generateRecipes() {
           console.log(data.hits[i].recipe.label);
           recipeEl.innerHTML+= "Serves: " + data.hits[i].recipe.yield +  "<br />";
           recipeEl.innerHTML+= '<img src="' + data.hits[i].recipe.image + '"> <br />';
-          recipeEl.innerHTML+= "Ingrediets: " + data.hits[i].recipe.ingredientLines +  "<br /> <br />";
+          recipeEl.innerHTML+= "Ingredients: " + data.hits[i].recipe.ingredientLines +  "<br /> <br />";
           recipeEl.innerHTML+= "<a href='" + data.hits[i].recipe.url + "' target='_blank'>Click here to go to the recipe!</a> <br />";
 
           //nutrition value for calories/fat/protein
@@ -68,6 +68,19 @@ function generateRecipes() {
         };
         });
       };
+    })
+    //modal for error handling + reminding client to write at least one ingredient
+    .catch(function(error) {
+      var modal = document.querySelector(".error-modal")
+      var button = document.querySelector(".material-icons")
+      button.onclick = function() {
+        modal.style.display = "block";
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
     });
 }
 
@@ -80,7 +93,7 @@ $(function() {
   });
 });
 
-//modal for error handling + reminding client to write at least one ingredient
+
 
 // Content for the map with working access token
 mapboxgl.accessToken =
