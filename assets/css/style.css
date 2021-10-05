@@ -212,7 +212,7 @@ body {
 img{
     border-radius: 75px;
     text-align: center;
-    border:solid 5px;
+    border:solid 5px #8cb369;;
     flex: 112%;
     margin: 80px;
     display: flex;
@@ -234,7 +234,7 @@ img{
     }
    
     #form {
-        border: 3px solid #11c21f;
+        border: 5px solid #8cb369;;
         background-color: #f4e285;
         padding-left:90px;
         padding-right:60px;
@@ -255,7 +255,7 @@ img{
       
       .form-input {
           text-align: center;
-        border: 1px solid #024e76;
+        border: 1px solid #8cb369;;
         display: block;
         padding: 7px 15px;
         font-size: 30px;
@@ -343,7 +343,7 @@ img{
       #map{
         border-radius: 75px;
         text-align: center;
-        border:solid 5px;
+        border:solid 5px #8cb369;;
         flex: 112%;
         margin: 80px;
         display: flex;
