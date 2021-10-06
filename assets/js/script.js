@@ -85,9 +85,9 @@ mapboxgl.accessToken =
   "pk.eyJ1IjoiYXp1cnl0ZSIsImEiOiJja3U5dGpsbjYwYTZnMnZubmVtZXZ4bzcyIn0.4TNon4_EuBE9I_4Xg-U7kQ";
 const map = new mapboxgl.Map({
   container: "map", // container ID
-  style: "mapbox://styles/mapbox/dark-v10", // style URL
+  style: "mapbox://styles/azuryte/ckucwoy143kj317mk5mmdpmmo", // style URL
   center: [-75.69, 45.42], // starting position [lng, lat]
-  zoom: 10, // starting zoom
+  zoom: 14, // starting zoom
 });
 
 // Add the control to the map.
