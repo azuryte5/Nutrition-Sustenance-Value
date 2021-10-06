@@ -30,84 +30,88 @@ function generateRecipes() {
     cuisineType +
     "&time=0-20&imageSize=REGULAR&random=true&field=uri&field=label&field=image&field=source&field=url&field=yield&field=dietLabels&field=healthLabels&field=cautions&field=ingredientLines&field=ingredients&field=calories&field=totalWeight&field=totalTime&field=cuisineType&field=mealType&field=dishType&field=totalNutrients&field=totalDaily";
 
-  fetch(apiURL).then(function (response) {
-    //request was successful
-    if (response.ok) {
-      response.json().then(function (data) {
-        console.log(data);
+  fetch(apiURL)
+    .then(function (response) {
+      //request was successful
+      if (response.ok) {
+        response.json().then(function (data) {
+          console.log(data);
 
-        //grabbing where the recipe cards will go, and setting it to empty to clear if repeat searches are done
-        var recipeContainer = document.getElementById("recipe-card-container");
-        recipeContainer.innerHTML = "";
+          //grabbing where the recipe cards will go, and setting it to empty to clear if repeat searches are done
+          var recipeContainer = document.getElementById(
+            "recipe-card-container"
+          );
+          recipeContainer.innerHTML = "";
 
-        // for loop to populate 3 recipe cards with info captured from the API
-        for (var i = 0; i <= 2; i++) {
-          var recipeEl = document.createElement("div");
-          recipeEl.classList = "text-center";
-          recipeEl.setAttribute("id", "generate");
-          recipeEl.innerHTML = data.hits[i].recipe.label + "<br />";
-          console.log(data.hits[i].recipe.label);
+          // for loop to populate 3 recipe cards with info captured from the API
+          for (var i = 0; i <= 2; i++) {
+            var recipeEl = document.createElement("div");
+            recipeEl.classList = "text-center";
+            recipeEl.setAttribute("id", "generate");
+            recipeEl.innerHTML = data.hits[i].recipe.label + "<br />";
+            console.log(data.hits[i].recipe.label);
 
-          recipeEl.innerHTML+= "Serves: " + data.hits[i].recipe.yield +  "<br />";
-          recipeEl.innerHTML+= '<img src="' + data.hits[i].recipe.image + '"> <br />';
-          recipeEl.innerHTML+= "Ingredients: " + data.hits[i].recipe.ingredientLines +  "<br /> <br />";
-          recipeEl.innerHTML+= "<a href='" + data.hits[i].recipe.url + "' target='_blank'>Click here to go to the recipe!</a> <br />";
+            recipeEl.innerHTML +=
+              "Serves: " + data.hits[i].recipe.yield + "<br />";
+            recipeEl.innerHTML +=
+              '<img src="' + data.hits[i].recipe.image + '"> <br />';
+            recipeEl.innerHTML +=
+              "Ingredients: " +
+              data.hits[i].recipe.ingredientLines +
+              "<br /> <br />";
+            recipeEl.innerHTML +=
+              "<a href='" +
+              data.hits[i].recipe.url +
+              "' target='_blank'>Click here to go to the recipe!</a> <br />";
 
-          //nutrition value for calories/fat/protein
+            //nutrition value for calories/fat/protein
 
-          recipeEl.innerHTML += "Nutritional values: " + "<br/> <br/>";
-          recipeEl.innerHTML +=
-            "Calories: " + Math.round(data.hits[i].recipe.calories) + "<br/>";
-          recipeEl.innerHTML +=
-            "Fat: " +
-            Math.round(data.hits[i].recipe.totalDaily.FAT.quantity) +
-            "<br/>";
-          recipeEl.innerHTML +=
-            "Protein: " +
-            Math.round(data.hits[i].recipe.totalDaily.PROCNT.quantity) +
-            "<br/>";
-          recipeEl.innerHTML +=
-            "Carbohyrates: " +
-            Math.round(data.hits[i].recipe.totalDaily.CHOCDF.quantity) +
-            "<br/>";
-          recipeEl.innerHTML +=
-            "Sodium: " +
-            Math.round(data.hits[i].recipe.totalDaily.NA.quantity) +
-            "<br/>";
-          recipeEl.innerHTML +=
-            "Cholesterol: " +
-            Math.round(data.hits[i].recipe.totalDaily.CHOLE.quantity) +
-            "<br/>";
+            recipeEl.innerHTML += "Nutritional values: " + "<br/> <br/>";
+            recipeEl.innerHTML +=
+              "Calories: " + Math.round(data.hits[i].recipe.calories) + "<br/>";
+            recipeEl.innerHTML +=
+              "Fat: " +
+              Math.round(data.hits[i].recipe.totalDaily.FAT.quantity) +
+              "<br/>";
+            recipeEl.innerHTML +=
+              "Protein: " +
+              Math.round(data.hits[i].recipe.totalDaily.PROCNT.quantity) +
+              "<br/>";
+            recipeEl.innerHTML +=
+              "Carbohyrates: " +
+              Math.round(data.hits[i].recipe.totalDaily.CHOCDF.quantity) +
+              "<br/>";
+            recipeEl.innerHTML +=
+              "Sodium: " +
+              Math.round(data.hits[i].recipe.totalDaily.NA.quantity) +
+              "<br/>";
+            recipeEl.innerHTML +=
+              "Cholesterol: " +
+              Math.round(data.hits[i].recipe.totalDaily.CHOLE.quantity) +
+              "<br/>";
 
-          recipeContainer.appendChild(recipeEl);
-
-
-        };
-        });
-      };
-    })
-    //modal for error handling + reminding client to write at least one ingredient
-    .catch(function(error) {
-      // alert("please check your internet connection")
-      $(".popup, .modal-content").addClass("is-active");
-      $(".close, .popup").on("click", function(){
-        $(".popup, .modal-content").removeClass("is-active");
+            recipeContainer.appendChild(recipeEl);
+          }
         });
       }
-      
-    )}
-  
-
+    })
+    //modal for error handling + reminding client to write at least one ingredient
+    .catch(function (error) {
+      // alert("please check your internet connection")
+      $(".popup, .modal-content").addClass("is-active");
+      $(".close, .popup").on("click", function () {
+        $(".popup, .modal-content").removeClass("is-active");
+      });
+    });
+}
 
 // This is for the dropdown plug in to get them to work
 $(function () {
   $(".chosen-select").chosen({
-    max_selected_options: 5,
+    // max_selected_options: 5,
     width: "90%",
   });
 });
-
-
 
 // Content for the map with working access token
 mapboxgl.accessToken =
@@ -128,7 +132,6 @@ map.addControl(
     zoom: 4,
   })
 );
-
 
 var center = map.getCenter();
 var westBox = center.lng - 0.5;
@@ -309,18 +312,22 @@ function generateStore(westBox, southBox, eastBox, northBox) {
         };
 
         // add markers to map
-for (const { geometry, properties } of geojson.features) {
-  // create a HTML element for each feature
-  const el = document.createElement('div');
-  el.className = 'marker';
+        for (const { geometry, properties } of geojson.features) {
+          // create a HTML element for each feature
+          const el = document.createElement("div");
+          el.className = "marker";
 
-  // make a marker for each feature and add to the map
-  new mapboxgl.Marker(el).setLngLat(geometry.coordinates).setPopup(
-    new mapboxgl.Popup({ offset: 25 }) // add popups
-      .setHTML(`<h3>${properties.title}</h3><p>${properties.description}</p>`)
-  ).addTo(map);
-}
-
+          // make a marker for each feature and add to the map
+          new mapboxgl.Marker(el)
+            .setLngLat(geometry.coordinates)
+            .setPopup(
+              new mapboxgl.Popup({ offset: 25 }) // add popups
+                .setHTML(
+                  `<h3>${properties.title}</h3><p>${properties.description}</p>`
+                )
+            )
+            .addTo(map);
+        }
       });
     }
   });
