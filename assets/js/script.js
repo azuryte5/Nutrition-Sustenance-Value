@@ -71,18 +71,16 @@ function generateRecipes() {
     })
     //modal for error handling + reminding client to write at least one ingredient
     .catch(function(error) {
-      var modal = document.querySelector(".error-modal")
-      var button = document.querySelector(".material-icons")
-      button.onclick = function() {
-        modal.style.display = "block";
+      // alert("please check your internet connection")
+      $(".popup, .modal-content").addClass("is-active");
+      $(".close, .popup").on("click", function(){
+        $(".popup, .modal-content").removeClass("is-active");
+        });
       }
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
-    });
-}
+      
+    )}
+  
+
 
 
 // This is for the dropdown plug in to get them to work
