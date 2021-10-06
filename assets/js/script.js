@@ -64,6 +64,7 @@ function generateRecipes() {
           recipeEl.innerHTML += "Cholesterol: " + Math.round(data.hits[i].recipe.totalDaily.CHOLE.quantity) + "<br/>"
 
           recipeContainer.appendChild(recipeEl);
+<<<<<<< HEAD
 
         };
         });
