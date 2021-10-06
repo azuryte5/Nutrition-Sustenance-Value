@@ -46,49 +46,47 @@ function generateRecipes() {
           // for loop to populate 3 recipe cards with info captured from the API
           for (var i = 0; i <= 2; i++) {
             var recipeEl = document.createElement("div");
-            recipeEl.classList = "text-center";
             recipeEl.setAttribute("id", "generate");
             recipeEl.innerHTML = data.hits[i].recipe.label + "<br />";
             console.log(data.hits[i].recipe.label);
-
             recipeEl.innerHTML +=
               "Serves: " + data.hits[i].recipe.yield + "<br />";
             recipeEl.innerHTML +=
               '<img src="' + data.hits[i].recipe.image + '"> <br />';
             recipeEl.innerHTML +=
-              "Ingredients: " +
+              "Ingredients: <br /> <br />" +
               data.hits[i].recipe.ingredientLines +
-              "<br /> <br />";
+              "<br /> <br /> <br />";
             recipeEl.innerHTML +=
               "<a href='" +
               data.hits[i].recipe.url +
               "' target='_blank'>Click here to go to the recipe!</a> <br />";
 
-            //nutrition value for calories/fat/protein
+            //nutrition values
 
             recipeEl.innerHTML += "Nutritional values: " + "<br/> <br/>";
             recipeEl.innerHTML +=
-              "Calories: " + Math.round(data.hits[i].recipe.calories) + "<br/>";
+              "Calories: " + Math.round(data.hits[i].recipe.calories) + "cal<br/>";
             recipeEl.innerHTML +=
               "Fat: " +
               Math.round(data.hits[i].recipe.totalDaily.FAT.quantity) +
-              "<br/>";
+              "g<br/>";
             recipeEl.innerHTML +=
               "Protein: " +
               Math.round(data.hits[i].recipe.totalDaily.PROCNT.quantity) +
-              "<br/>";
+              "g<br/>";
             recipeEl.innerHTML +=
               "Carbohyrates: " +
               Math.round(data.hits[i].recipe.totalDaily.CHOCDF.quantity) +
-              "<br/>";
+              "g<br/>";
             recipeEl.innerHTML +=
               "Sodium: " +
               Math.round(data.hits[i].recipe.totalDaily.NA.quantity) +
-              "<br/>";
+              "mg<br/>";
             recipeEl.innerHTML +=
               "Cholesterol: " +
               Math.round(data.hits[i].recipe.totalDaily.CHOLE.quantity) +
-              "<br/>";
+              "g<br/>";
 
             recipeContainer.appendChild(recipeEl);
           }
@@ -108,7 +106,6 @@ function generateRecipes() {
 // This is for the dropdown plug in to get them to work
 $(function () {
   $(".chosen-select").chosen({
-    // max_selected_options: 5,
     width: "90%",
   });
 });
