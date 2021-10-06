@@ -124,6 +124,7 @@ map.addControl(
   })
 );
 
+
 var center = map.getCenter();
 var westBox = center.lng - 0.5;
 var southBox = center.lat - 0.3;
