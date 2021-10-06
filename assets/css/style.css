@@ -343,7 +343,9 @@ li:hover {
 }
 
 #map {
-  border-radius: 75px;
+  width: 800px;
+  height: 500px;
+  border-radius: 15px;
   text-align: center;
   border: solid 5px #8cb369;
   flex: 112%;
