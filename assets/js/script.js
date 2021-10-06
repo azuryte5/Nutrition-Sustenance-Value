@@ -48,18 +48,10 @@ function generateRecipes() {
           recipeEl.innerHTML = data.hits[i].recipe.label + "<br />";
           console.log(data.hits[i].recipe.label);
 
-          recipeEl.innerHTML +=
-            "Serves: " + data.hits[i].recipe.yield + "<br />";
-          recipeEl.innerHTML +=
-            '<img src="' + data.hits[i].recipe.image + '"> <br />';
-          recipeEl.innerHTML +=
-            "Ingrediets: " +
-            data.hits[i].recipe.ingredientLines +
-            "<br /> <br />";
-          recipeEl.innerHTML +=
-            "<a href='" +
-            data.hits[i].recipe.url +
-            "' target='_blank'>Click here to go to the recipe!</a> <br />";
+          recipeEl.innerHTML+= "Serves: " + data.hits[i].recipe.yield +  "<br />";
+          recipeEl.innerHTML+= '<img src="' + data.hits[i].recipe.image + '"> <br />';
+          recipeEl.innerHTML+= "Ingredients: " + data.hits[i].recipe.ingredientLines +  "<br /> <br />";
+          recipeEl.innerHTML+= "<a href='" + data.hits[i].recipe.url + "' target='_blank'>Click here to go to the recipe!</a> <br />";
 
           //nutrition value for calories/fat/protein
 
@@ -88,11 +80,24 @@ function generateRecipes() {
             "<br/>";
 
           recipeContainer.appendChild(recipeEl);
-        }
-      });
-    }
-  });
-}
+
+
+        };
+        });
+      };
+    })
+    //modal for error handling + reminding client to write at least one ingredient
+    .catch(function(error) {
+      // alert("please check your internet connection")
+      $(".popup, .modal-content").addClass("is-active");
+      $(".close, .popup").on("click", function(){
+        $(".popup, .modal-content").removeClass("is-active");
+        });
+      }
+      
+    )}
+  
+
 
 // This is for the dropdown plug in to get them to work
 $(function () {
@@ -102,7 +107,7 @@ $(function () {
   });
 });
 
-//modal for error handling + reminding client to write at least one ingredient
+
 
 // Content for the map with working access token
 mapboxgl.accessToken =

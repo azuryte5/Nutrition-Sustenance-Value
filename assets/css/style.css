@@ -524,3 +524,22 @@ margin-left: 528px;
         margin: 5px;
 
     } */
+      }
+
+      /* modal styling */
+      
+.modal-overlay {
+  visibility:hidden;
+  }
+        
+.modal-content {
+  visibility:hidden;
+  }
+
+.modal-overlay.is-active{
+  visibility:visible;
+  }
+    
+.modal-content.is-active {
+  visibility:visible;
+  }
