@@ -1,15 +1,21 @@
 # Nutrition-Sustenance-Value
 Name of Web Application: NutriValue
 
+# Developers 
+[Randy](https://github.com/RandolphRichard)
+[Jess](https://github.com/jhugray)
+[Valerie](https://github.com/valerrianna)
+[Andrew](https://github.com/azuryte5)
+[Skyler](https://github.com/SkylerAl)
 
-Description:
+# Description:
 =======
 
 * The URL of the deployed application: https://azuryte5.github.io/Nutrition-Sustenance-Value/
 
 * The URL of the GitHub repository: https://github.com/azuryte5/Nutrition-Sustenance-Value
 
-<img src="/assets/img/screenshot-nutrivalue.png" alt="Recipe app with search" width="500" style="max-width: 100%;">
+
 
 
 As an individual interested in healthy eating with a busy lifestyle,
@@ -35,5 +41,7 @@ Technologies use:
 5. jQuery
 5. https://developer.edamam.com/ - API service for recipes and nutritions
 6. https://docs.mapbox.com/mapbox-gl-js/guides/install/#quickstart - API service for map
+7. Chosen -jquery dropdown plugin
 
 Image of mock-up:
+<img src="/assets/img/screenshot-nutrivalue.png" alt="Recipe app with search" width="500" style="max-width: 100%;">
