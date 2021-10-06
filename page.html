@@ -8,6 +8,7 @@
   
   <!-- Bulma codes -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
   <!-- fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
@@ -96,9 +97,20 @@
             restaurant
             </span>Find Recipes!</button>
 
-
         </div>
       </div>
+
+      <!--Creates the popup body-->
+<div class="modal-overlay">
+  <!--Creates the popup content-->
+   <div class="modal-content has-text-centered has-text-white">
+      <h2>Oh no!</h2>
+      <p> There seems to be a connection error, please check your internet connection!</p>
+     <!--popup's close button-->
+      <button class="close">Close</button>    
+  </div>
+  </div>
+
       <div class="row">
         <div id="recipe-card-container">
         </div>
