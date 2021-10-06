@@ -317,9 +317,9 @@ img{
     }
      /* These are map css */ 
     .marker {
-        background-image: url('../img/carrot.png');
+        background-image: url('/assets/img/carrot.png');
         background-size: cover;
-        width: 0px;
+        width: 50px;
         height: 50px;
         border-radius: 50%;
         cursor: pointer;
