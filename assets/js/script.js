@@ -82,13 +82,6 @@ function generateRecipes() {
     )}
   
 
-=======
-        }
-      });
-    }
-  });
-}
->>>>>>> 6804f4ab8263d94b616d1807fdd53021ea630e3a
 
 // This is for the dropdown plug in to get them to work
 $(function () {
