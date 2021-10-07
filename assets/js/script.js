@@ -1,7 +1,7 @@
 var cuisineType = "";
 var healthType = "";
 
-
+// Onselect and Load values () presently saves 1 option per dropdown
 function onSelect() {
   var value = $("#cuisine").val()
   // var value = document.getElementById("cuisine").value;
@@ -19,12 +19,18 @@ function onSelect2() {
   localStorage.setItem("preferences", value);
 }
 
+function onSelect3() {
+  var value =$("#ingredient").val()
+  console.log(value)
+  localStorage.setItem("ingredient",value);
+}
 function loadValues(){
   if (localStorage.getItem("cuisine") == null && localStorage.getItem("preferences") == null) {
     return;
   }
   $("#health").val(localStorage.getItem("preferences"));
   $("#cuisine").val(localStorage.getItem("cuisine"))
+  $("#ingredient").val(localStorage.getItem("ingredient"))
 }
 
 loadValues();
