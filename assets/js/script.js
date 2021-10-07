@@ -1,6 +1,22 @@
 var cuisineType = "";
 var healthType = "";
 
+function onSelect() {
+  var value = document.getElementById("health").value;
+  if(localStorage.getItem("preferences") !== null){
+    value = localStorage.getItem("preferences") + " " + value;
+  }
+  localStorage.setItem("preferences", value);
+}
+
+function onSelect() {
+  var value = document.getElementById("cuisine").value;
+  if(localStorage.getItem("cusine") !== null){
+    value = localStorage.getItem("cuisine") + " " + value;
+  }
+  localStorage.setItem("cuisine", value);
+}
+
 function generateRecipes() {
 
 // captures drop down inputs and joins them with & to fit API needs
