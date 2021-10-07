@@ -30,7 +30,12 @@ So that I can reduce food waste, while avoiding unhealthy fast food chains and a
 
 The function of the app:
 
-When I enter the website I am presented with a front page describing the purpose of the application. The header has an option that will link to the "How it Works" section that explains how to use the application. There is a "Click Here" button that will navigate me to another page that will allow me to add my current ingredients to the list to generate a recipe. Before generating, I can select various options to restrict certain types of recipes to meet my diet restrictions. The submit button will generate three receipes that will include an image of the recipes, list of ingredients and nutrition information. In the event that I am missing some ingredients, the website will present me with a section to add my address information to locate me to the nearest grocery.
+When I enter the website I am presented with a front page describing the purpose of the application. 
+The header has an option that will link to the "How it Works" section that explains how to use the application. 
+There is a "Click Here" button that will navigate me to another page that will allow me to add my current ingredients to the list to generate a recipe. 
+Before generating, I can select various options to restrict certain types of recipes to meet my diet restrictions. 
+The submit button will generate three receipes that will include an image of the recipes, list of ingredients and nutrition information. 
+In the event that I am missing some ingredients, the website will present me with a section to add my address information to locate me to the nearest grocery.
 
 Technologies use:
 
