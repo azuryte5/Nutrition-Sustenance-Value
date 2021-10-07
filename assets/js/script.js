@@ -1,7 +1,16 @@
 var cuisineType = "";
 var healthType = "";
 
+
 function onSelect() {
+  var value = document.getElementById("cuisine").value;
+  if(localStorage.getItem("cuisine") !== null){
+    value = localStorage.getItem("cuisine") + " " + value;
+  }
+  localStorage.setItem("cuisine", value);
+}
+
+function onSelect2() {
   var value = document.getElementById("health").value;
   if(localStorage.getItem("preferences") !== null){
     value = localStorage.getItem("preferences") + " " + value;
@@ -9,13 +18,17 @@ function onSelect() {
   localStorage.setItem("preferences", value);
 }
 
-function onSelect() {
-  var value = document.getElementById("cuisine").value;
-  if(localStorage.getItem("cusine") !== null){
-    value = localStorage.getItem("cuisine") + " " + value;
+function loadValues(){
+  if (localStorage.getItem("cuisine") == null||localStorage.getItem("preferences") == null) {
+    return;
   }
-  localStorage.setItem("cuisine", value);
+  // var loadHealth=localStorage.getItem("preferences")
+  // var loadCuisine=localStorage.getItem("cuisine")
+  $("#health").val(localStorage.getItem("preferences"));
+  $("#cuisine").val(localStorage.getItem("cuisine"))
 }
+
+loadValues();
 
 function generateRecipes() {
   // captures drop down inputs and joins them with & to fit API needs
