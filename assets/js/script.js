@@ -1,21 +1,39 @@
 var cuisineType = "";
 var healthType = "";
 
+// Onselect and Load values () presently saves 1 option per dropdown
 function onSelect() {
-  var value = document.getElementById("health").value;
-  if(localStorage.getItem("preferences") !== null){
-    value = localStorage.getItem("preferences") + " " + value;
-  }
+  var value = $("#cuisine").val()
+  // var value = document.getElementById("cuisine").value;
+  // if(localStorage.getItem("cuisine") !== null){
+  //   value = localStorage.getItem("cuisine") + " " + value;
+  // }
+  localStorage.setItem("cuisine", value);
+}
+
+function onSelect2() {
+  var value = $("#health").val();
+  // if(localStorage.getItem("preferences") !== null){
+  //   value = localStorage.getItem("preferences") + " " + value;
+  // }
   localStorage.setItem("preferences", value);
 }
 
-function onSelect() {
-  var value = document.getElementById("cuisine").value;
-  if(localStorage.getItem("cusine") !== null){
-    value = localStorage.getItem("cuisine") + " " + value;
-  }
-  localStorage.setItem("cuisine", value);
+function onSelect3() {
+  var value =$("#ingredient").val()
+  console.log(value)
+  localStorage.setItem("ingredient",value);
 }
+function loadValues(){
+  if (localStorage.getItem("cuisine") == null && localStorage.getItem("preferences") == null) {
+    return;
+  }
+  $("#health").val(localStorage.getItem("preferences"));
+  $("#cuisine").val(localStorage.getItem("cuisine"))
+  $("#ingredient").val(localStorage.getItem("ingredient"))
+}
+
+loadValues();
 
 function generateRecipes() {
   // captures drop down inputs and joins them with & to fit API needs

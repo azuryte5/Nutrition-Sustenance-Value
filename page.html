@@ -108,6 +108,7 @@
               placeholder="rice, chicken, oranges"
               id="ingredient"
               class="form-input"
+              onchange="onSelect3()"
             />
             <!--https://harvesthq.github.io/chosen/ :link how it works  
             https://harvesthq.github.io/chosen/options.html is link to different options-->
@@ -142,7 +143,7 @@
                 data-placeholder="--Select--"
                 multiple="true"
                 class="chosen-select"
-                onchange="onSelect()"
+                onchange="onSelect2()"
               >
                 <option value="dairy-free">Dairy-free</option>
                 <option value="egg-free">Egg-free</option>
@@ -184,7 +185,9 @@
             <h1>Places to Buy</h1>
           </div>
           <div>
-            <button type="button" id="searchStore">
+            <button type="button" id="searchStore"><span class="material-icons">
+              shopping_cart
+              </span>
               Find Fresh Food near You
             </button>
             <div id="map" style="width: 800px; height: 500px"></div>
