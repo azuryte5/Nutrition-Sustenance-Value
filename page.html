@@ -1,129 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link
+      rel="icon"
+      href="./assets/img/favicon.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <link rel="icon" href="./assets/img/favicon.png" type="image/png" sizes="16x16">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- Bulma codes -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-  rel="stylesheet">
-  <!---Added chosen plugin for dropdown-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> -->
- 
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <!--Mapbox Api-->
-  <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- Bulma codes -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
 
-  <title>Nutrivalue</title>
-</head>
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!---Added chosen plugin for dropdown-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.css"
+    />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> -->
 
-<body>
-  <!-- navigation tags - block level element -->
-  <div class="header">
-    <label class="l">Nutri<span class="seo">Value</span></label>
-    <nav>
-      <ul>
-        <li>
-          <a class="active" href="./index.html">How It works</a>
-        </li>
-        <li>
-          <a href="#generate">Recipes</a>
-        </li>
-        <li>
-          <a href="#map">Places to Buy</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <section></section>
-  <div class="container">
-    <div class="row">
-      <div id="image" class="text-center">
-        <img src="./assets/img/2.jpg"width="1000px" alt="Mom with her daughter preparing a tasty meal">
-      </div>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!--Mapbox Api-->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css"
+      type="text/css"
+    />
+    <!--Mapbox labels-->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <title>Nutrivalue</title>
+  </head>
+
+  <body>
+    <!-- navigation tags - block level element -->
+    <div class="header">
+      <label class="l">Nutri<span class="seo">Value</span></label>
+      <nav>
+        <ul>
+          <li>
+            <a class="active" href="./index.html">How It works</a>
+          </li>
+          <li>
+            <a href="#generate">Recipes</a>
+          </li>
+          <li>
+            <a href="#map">Places to Buy</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-  
-    <div class="row">
-      <div id="form" class="text-center">
-        <div>
-          <h2>What ingredients do you have on hand? <br /> You can include up to 10.</h2>
-          <input type="text" placeholder="rice, chicken, oranges" id="ingredient" class="form-input" />
+    <section></section>
+    <div class="container">
+      <div class="row">
+        <div id="image">
+          <img
+            src="./assets/img/2.jpg"
+            width="1000px"
+            alt="Mom with her daughter preparing a tasty meal"
+          />
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="form">
+          <div>
+            <h2>
+              What ingredients do you have on hand? <br />
+              You can include up to 10.
+            </h2>
+            <input
+              type="text"
+              placeholder="rice, chicken, oranges"
+              id="ingredient"
+              class="form-input"
+            />
             <!--https://harvesthq.github.io/chosen/ :link how it works  
             https://harvesthq.github.io/chosen/options.html is link to different options-->
-          <div class="flex-row">
-            <span>Are you in the mood for a particular type of cuisine?</span>
-            <select id="cuisine" data-placeholder="Select up to 3" multiple="true" class="chosen-select" multiple onchange="onSelect()">
-              <option value="American">American</option>
-              <option value="Asian">Asian</option>
-              <option value="British">British</option>
-              <option value="Caribbean">Caribbean</option>
-              <option value="Indian">Indian</option>
-              <option value="Italian">Italian</option>
-              <option value="Kosher">Kosher</option>
-              <option value="Mexican">Mexican</option>
-            </select>
+            <div class="flex-row">
+              <span>Are you in the mood for a particular type of cuisine?</span>
+              <select
+                id="cuisine"
+                data-placeholder="--Select--"
+                multiple="true"
+                class="chosen-select"
+                onchange="onSelect()"
+              >
+                <option value="American">American</option>
+                <option value="Asian">Asian</option>
+                <option value="British">British</option>
+                <option value="Caribbean">Caribbean</option>
+                <option value="Indian">Indian</option>
+                <option value="Italian">Italian</option>
+                <option value="Kosher">Kosher</option>
+                <option value="Mediterranean">Mediterranean</option>
+                <option value="Mexican">Mexican</option>
+              </select>
+            </div>
+
+            <div class="flex-row">
+              <span
+                >Do you have any particular health requirements or
+                preferences?</span
+              >
+              <select
+                id="health"
+                data-placeholder="--Select--"
+                multiple="true"
+                class="chosen-select"
+                onchange="onSelect()"
+              >
+                <option value="dairy-free">Dairy-free</option>
+                <option value="egg-free">Egg-free</option>
+                <option value="gluten-free">Gluten-free</option>
+                <option value="keto-friendly">Keto-friendly</option>
+                <option value="low-sugar">Low-sugar</option>
+                <option value="paleo">Paleo</option>
+                <option value="peanut-free">Peanut-free</option>
+                <option value="pork-free">Pork-free</option>
+                <option value="shellfish-free">Shellfish-free</option>
+                <option value="soy-free ">Soy-free</option>
+                <option value="vegan">Vegan</option>
+              </select>
+            </div>
+
+            <button type="button" onclick="generateRecipes()">
+              <span class="material-icons"> restaurant </span>Find Recipes!
+            </button>
           </div>
+        </div>
 
-          <div class="flex-row">
-            <span>Do you have any particular health requirements or preferences?</span>
-            <select id="health" data-placeholder="Select up to 3" multiple="true" class="chosen-select" multiple onchange="onSelect()">
-              <option value="dairy-free">Dairy-free</option>
-              <option value="egg-free">Egg-free</option>
-              <option value="gluten-free">Gluten-free</option>
-              <option value="low-sugar">Low-sugar</option>
-              <option value="paleo">Paleo</option>
-              <option value="peanut-free">Peanut-free</option>
-              <option value="soy-free ">Soy-free</option>
-              <option value="vegan">Vegan</option>
-            </select>
+        <!--Creates the popup body-->
+        <div class="modal-overlay">
+          <!--Creates the popup content-->
+          <div class="modal-content has-text-centered has-text-white">
+            <h2>Oh no!</h2>
+            <p>There seems to be a connection error, please try again later!</p>
+            <!--popup's close button-->
+            <button class="close">Close</button>
           </div>
-          
+        </div>
 
-          <button type="button" onclick="generateRecipes()"><span class="material-icons">
-            restaurant
-            </span>Find Recipes!</button>
+        <div class="row">
+          <div id="recipe-card-container"></div>
 
+          <div
+            class="little-title column is-full is-half is-offset-one-quarter"
+          >
+            <h1>Places to Buy</h1>
+          </div>
+          <div>
+            <button type="button" id="searchStore">
+              Find Fresh Food near You
+            </button>
+            <div id="map" style="width: 800px; height: 500px"></div>
 
+            <footer class="footer">
+              <div class="content has-text-centered">
+                <!-- <div class="row footer"> -->
+                <div class="row footer">
+                  <h2>&copy; 2021 Made with ❤️️ by the Green Team</h2>
+                </div>
+              </div>
+            </footer>
+            <!-- </div> -->
+            <!--Added Scripts for jquery and chosen-->
+            <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.js"></script>
+
+            <script src="./assets/js/script.js"></script>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div id="recipe-card-container">
-        </div>
-        <div class="little-title">
-          <h1>Places to Buy</h1>
-        </div>
-        <div id='map' style='width: 1000px; height: 500px;' ></div>
-     
-        <footer class="footer">
-          <div class="content has-text-centered">
-            <p>
-        <!-- <div class="row footer"> -->
-       
-      
-        <div class="row footer">
-          <h2>&copy; 2021 Made with ❤️️ by the Green Team</h2>
-          </p>
-        </div>
-        </footer>
-      <!-- </div> -->
-      <!--Added Scripts for jquery and chosen-->
-      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.js"></script>
-      
-      <script src="./assets/js/script.js"></script>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
-
-         
