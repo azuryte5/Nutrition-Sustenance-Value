@@ -3,27 +3,26 @@ var healthType = "";
 
 
 function onSelect() {
-  var value = document.getElementById("cuisine").value;
-  if(localStorage.getItem("cuisine") !== null){
-    value = localStorage.getItem("cuisine") + " " + value;
-  }
+  var value = $("#cuisine").val()
+  // var value = document.getElementById("cuisine").value;
+  // if(localStorage.getItem("cuisine") !== null){
+  //   value = localStorage.getItem("cuisine") + " " + value;
+  // }
   localStorage.setItem("cuisine", value);
 }
 
 function onSelect2() {
-  var value = document.getElementById("health").value;
-  if(localStorage.getItem("preferences") !== null){
-    value = localStorage.getItem("preferences") + " " + value;
-  }
+  var value = $("#health").val();
+  // if(localStorage.getItem("preferences") !== null){
+  //   value = localStorage.getItem("preferences") + " " + value;
+  // }
   localStorage.setItem("preferences", value);
 }
 
 function loadValues(){
-  if (localStorage.getItem("cuisine") == null||localStorage.getItem("preferences") == null) {
+  if (localStorage.getItem("cuisine") == null && localStorage.getItem("preferences") == null) {
     return;
   }
-  // var loadHealth=localStorage.getItem("preferences")
-  // var loadCuisine=localStorage.getItem("cuisine")
   $("#health").val(localStorage.getItem("preferences"));
   $("#cuisine").val(localStorage.getItem("cuisine"))
 }
