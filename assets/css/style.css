@@ -223,7 +223,7 @@ img {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
 }
 
 #form {
@@ -665,8 +665,22 @@ margin:0;
 }
 
 .row footer {
-  display: relative;
-  font-size: 6vw;
+  display: block;
+  font-size: 3vw;
+  margin: 0;
+}
+
+.little-title h1 {
+  font-size: 8vw;
+}
+
+#searchStore {
+  margin: 0;
+}
+
+#map {
+  width: 90%;
+  margin: 0;
 }
 }
 
