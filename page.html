@@ -68,7 +68,8 @@
 
   <body>
     <!-- navigation tags - block level element -->
-    <div class="header">
+    <div class="container is-fluid">
+      <div class="header">
       <label class="l">Nutri<span class="seo">Value</span></label>
       <nav>
         <ul>
@@ -84,7 +85,6 @@
         </ul>
       </nav>
     </div>
-    <section></section>
       <div class="row">
         <div id="image">
           <img class="friends"
@@ -94,9 +94,9 @@
           />
         </div>
       </div>
-      <div class="container">
-      <div class="row">
-        <div id="form">
+      <div class="container is-fluid">
+      <div class="row is-fluid">
+        <div id="form" class="is-fluid">
           <div>
             <h2>
               What ingredients do you have on hand? <br />
@@ -163,7 +163,7 @@
             </button>
           </div>
         </div>
-
+        
         <!--Creates the popup body-->
         <div class="modal-overlay">
           <!--Creates the popup content-->
@@ -190,9 +190,9 @@
               Find Fresh Food near You
             </button>
             <div class="mapo is-full is-half is-offset-one-quarter">
-            <div id="map" style="width: 800px; height: 500px"></div>
+            <div id="map"></div>
 
-            <footer class="footer">
+            <footer class="footer is-fluid">
               <div class="content has-text-centered">
                 <!-- <div class="row footer"> -->
                 <div class="row footer">
@@ -214,6 +214,8 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
     </div>
   </body>
 </html>

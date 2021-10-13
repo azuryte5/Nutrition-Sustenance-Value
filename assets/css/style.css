@@ -1,4 +1,5 @@
 * {
+  
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -12,7 +13,8 @@ html {
   background-image: url("../img/4.jpg");
   background-size: cover;
   background-attachment: fixed;
-  background-position: 50%;
+  background-position: 20%;
+  background-repeat: no-repeat;
 }
 
 /* .indexlogo{
@@ -213,7 +215,7 @@ img {
   justify-content: space-between;
   flex-wrap: wrap;
   flex-shrink: 3;
-  max-width: 234%;
+  max-width: 70%;
 }
 
 .row {
@@ -225,6 +227,7 @@ img {
 }
 
 #form {
+  justify-content: center;
   border: 5px solid #8cb369;
   background-color: #f4e285;
   padding: 40px;
@@ -291,11 +294,11 @@ button {
   display: flex;
   flex-wrap: wrap;
   font-family: "Courgette", cursive;
-  font-size: 30px;
+  font-size: 4vw;
 }
 
 #generate img {
-  max-width: fit-content;
+  max-width: 50%;
   margin: 50px;
 }
 
@@ -361,7 +364,6 @@ li:hover {
   justify-content: space-between;
   flex-wrap: wrap;
   flex-shrink: 3;
-  max-width: 234%;
 }
 #searchStore {
   text-align: center;
@@ -388,7 +390,7 @@ li:hover {
   font-family: "Courgette", cursive;
 }
 /*end of map css */
-@media screen and (max-width: 1277.09px) {
+/*@media screen and (max-width: 1277.09px) {
   img {
     margin-top: 120px;
     margin-left: 100px;
@@ -426,7 +428,7 @@ li:hover {
 }
 @media screen and (max-width: 1645px) {
   #searchStore {
-    /* text-align: center; */
+    /* text-align: center; 
     margin-left: 560px;
   }
 }
@@ -436,7 +438,7 @@ li:hover {
         text-align: center;
         margin-left: 150px;
       }
-    } */
+    } 
 
 @media screen and (max-width: 1645.33px) {
   #map {
@@ -508,7 +510,7 @@ li:hover {
   /* element.style {
     width: 200px
     margin-left:128px;
-  } */
+  } 
 }
 
 @media screen and (max-width: 2573px) {
@@ -574,8 +576,9 @@ li:hover {
     width: 20px;
   }
 
-  .images{
-    width:600px;
+  .img{
+    margin: 5%;
+    width:50%;
   }
   .row-button button {
     margin-left: 300px;
@@ -594,9 +597,76 @@ li:hover {
   }
 
 }
-@media screen and (min-width: 769px){
+
+@media screen and (max-width: 769px){
 .column.is-offset-one-quarter{
 margin-left: 35%;
+}
+.img{
+  margin: 5%;
+  width:50%;
+}
+}
+*/
+@media screen and (max-width: 480px){
+.row-middle .indexlogo{
+  margin: 0;
+  font-size: 6vw;
+  position: relative;
+  padding:0;}
+
+#description{
+padding: 0;
+margin:0;
+}  
+
+.img{
+  margin: 5%;
+  width:60%;
+  display: block;
+}
+
+.li {
+  font-size: 20vw;
+}
+#start{
+margin:0;
+}
+
+.begin{
+  justify-content: center;
+}
+
+.indexb {
+  background-image: url("../img/4.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.footer-index {
+  font-size: 6vw;
+}
+
+.header label {
+  margin: 0;
+}
+.header nav {
+  margin:0;
+}
+
+.row{
+  display: block;
+}
+
+#form {
+  width: 80%;
+}
+
+.row footer {
+  display: relative;
+  font-size: 6vw;
 }
 }
 
@@ -610,6 +680,7 @@ margin-left: 35%;
 /* modal styling */
 
 .modal-overlay {
+
   visibility: hidden;
 }
 
@@ -626,4 +697,4 @@ margin-left: 35%;
 }
 
 
-body, button, input, optgroup, select, textarea
+/*body, button, input, optgroup, select, textarea */
