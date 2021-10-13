@@ -195,7 +195,7 @@ function generateStore(westBox, southBox, eastBox, northBox) {
     if (response.ok) {
       return response.json().then(function (response) {
         console.log(response);
-
+        // almost got this working!
         const geojson = {
           type: "FeatureCollection",
           features: [
