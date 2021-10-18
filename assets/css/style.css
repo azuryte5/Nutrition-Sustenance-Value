@@ -369,7 +369,8 @@ li:hover {
 }
 #searchStore {
   text-align: center;
-  margin-left: 450px;
+  margin-right: 33px;
+  margin-left: 296px;
 }
 .mapboxgl-popup-close-button {
   padding: 5px;
