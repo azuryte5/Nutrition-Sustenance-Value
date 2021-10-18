@@ -627,11 +627,40 @@ margin-left: 35%;
 #start {
   margin-left: 133px;
 }
+#form {
+  width: 101%;
+  padding: 0.5;
+  margin: 11.5%;
+}
+.little-title h1{
+  margin-left: 50px;
+}
+#generate{
+  font-size: 5vw;
+}
 }
 
 @media screen and (max-width: 320px){
   #start{
     margin-left: 50px;
+  }
+  #form {
+    width: 99%;
+    padding: 0.5;
+    margin: -1%;
+  }
+  .little-title h1{
+    margin-left: 50px;
+  }
+  #generate{
+    font-size: 5vw;
+  }
+
+  .header nav ul li a{
+    font-size: 20px;
+  }
+  .friends{
+margin-left: 40px;
   }
 }
 
@@ -806,7 +835,7 @@ margin-left: 95px;
 }
 
 .friends {
-  margin: 0;
+  margin: 64px;
 }
 #form {
   width: 90%;
@@ -823,12 +852,18 @@ margin-left: 95px;
 }
 
 #searchStore {
-  margin: 0;
+  margin: 53px;
 }
 
 #map {
   width: 90%;
   margin: 0;
+}
+.container.is-fluid {
+  max-width: none!important;
+  padding-left: 27px;
+  padding-right: 35px;
+  width: 107%;
 }
 }
 @media screen and (max-width: 540px){
@@ -883,9 +918,35 @@ margin-left: 95px;
   img.images{
     margin-left: 20%;
   }
+  .header nav {
+    padding-top: 17px;
+    margin-right: 266px;
+    float: right;
+    font-size: 30px;
+    margin-bottom: 34px;
+    width: 210px;
+}
+#form{
+  width:97%;
+}
+#generate{
+margin: -44.5%;
+margin-top: -72px;
+margin-left: 261px;
+
+padding: 51px;
+}
 }
 
 @media screen and (max-width: 768px){
+  .header nav {
+    padding-top: 17px;
+    margin-right: 266px;
+    float: right;
+    font-size: 30px;
+    margin-bottom: 34px;
+    width: 210px;
+}
   #start{
     margin-left: 251px;
   }
@@ -905,6 +966,10 @@ margin-left: 95px;
 img.images{
   margin-left: 0px;
 }
+}
+
+@media screen and (max-width: 1543px){
+  
 }
 
 
