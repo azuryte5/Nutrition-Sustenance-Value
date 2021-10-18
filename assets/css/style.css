@@ -136,7 +136,9 @@ em {
 .row-button button a {
   color: black;
 }
-
+#start {
+  margin-left: 25%;
+}
 .row-button button:hover {
   background-position: 5px -100px;
   border-radius: 100px 0px;
@@ -187,6 +189,7 @@ em {
   display: inline-block;
   margin-left: 35px;
   font-family: "Courgette", cursive;
+  
 }
 
 a {
@@ -219,8 +222,7 @@ img {
 }
 
 .row {
-  position: relative;
-  display: flex;
+  display: block;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
@@ -728,7 +730,7 @@ margin-left: 40px;
     width: 250px; 
   }
   #start{
-    margin-left: 100px;
+    margin-left: 35%;
   }
   .footer-index h2{
     font-size: 4vw;
@@ -774,7 +776,7 @@ margin-left: 40px;
 }
 
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 600px){
 .row-middle .indexlogo{
   margin: 0;
   font-size: 6vw;
@@ -787,9 +789,13 @@ margin:0;
 }  
 
 .img{
-  margin: 5%;
+  margin: 0%;
   width:60%;
   display: block;
+}
+
+.images{
+  margin-left: 0px;
 }
 
 .li {
@@ -825,11 +831,14 @@ margin-left: 95px;
 
 .row{
   display: block;
+  margin: 0;
 }
 
+.friends {
+  margin: 0;
+}
 #form {
-  margin-left: 0;
-  width: 109%;
+  width: 90%;
 }
 
 .row footer {
@@ -897,7 +906,7 @@ margin-left: 95px;
     width: 131px;
   }
   #start{
-    margin-left: 80px;
+    margin-left: 35%;
   }
   .footer-index h2{
     font-size: 4vw;
@@ -907,7 +916,7 @@ margin-left: 95px;
   } 
 
   img.images{
-    margin-left: 97px;
+    margin-left: 20%;
   }
   .header nav {
     padding-top: 17px;
@@ -942,7 +951,7 @@ padding: 51px;
     margin-left: 251px;
   }
   img.images{
-    margin-left: 117px;
+    margin-left: 0px;
   }
 }
 
@@ -952,10 +961,10 @@ padding: 51px;
     width: 95.33333%;
 }
 #start{
-  margin-left: 281px;
+  margin-left: 50%;
 }
 img.images{
-  margin-left: 167px;
+  margin-left: 0px;
 }
 }
 
