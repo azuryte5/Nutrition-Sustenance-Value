@@ -369,7 +369,8 @@ li:hover {
 }
 #searchStore {
   text-align: center;
-  margin-left: 450px;
+  margin-right: 33px;
+  margin-left: 296px;
 }
 .mapboxgl-popup-close-button {
   padding: 5px;
@@ -920,7 +921,7 @@ margin-left: 95px;
   }
   .header nav {
     padding-top: 17px;
-    margin-right: 266px;
+    margin-right: 73px;
     float: right;
     font-size: 30px;
     margin-bottom: 34px;
@@ -941,7 +942,7 @@ padding: 51px;
 @media screen and (max-width: 768px){
   .header nav {
     padding-top: 17px;
-    margin-right: 73px;
+    margin-right:73px;
     float: right;
     font-size: 30px;
     margin-bottom: 34px;
